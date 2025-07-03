@@ -1,0 +1,40 @@
+整合UDS功能：
+1.以功能为导向，分别打包main函数中app执行策略，分割成各功能函数；然后将高压互锁判断，报文接收放入OSTK 10ms任务，将系统状态与功率计算等放入OSTK 100ms任务中进行调用；
+
+2.移植bootloader UDS部分功能（添加OSTK, CAN_CFG, CAN_TP, DCAN, DATA_TYPE）;
+
+3.BF7006BMxx_it.c中添加：
+
+3.1
+#ifdef BF7x06BMxx_CAN_APP_DRIVER_PRESENT
+    #include "BF7006BMxx_app_can.h"
+#endif
+
+3.2
+TIMER0_IRQHandler函数中添加(流控帧处理)：
+    g_time0IsBusy = TRUE;
+    DCAN_NRC78_Send_Task(NULL, 0, 0);
+    g_time0IsBusy = FALSE;
+
+3.3
+CAN_RX_IRQHandler函数中添加：
+诊断请求报文标志置位
+g_recvCanDataRdy = TRUE;
+bus_off状态置位
+#ifdef BF7x06BMxx_CAN_APP_DRIVER_PRESENT
+    busoff_hold = 0x0U;
+#endif
+
+3.4CAN_TX_IRQHandler中断函数中添加
+bus_off状态置位
+#ifdef BF7x06BMxx_CAN_APP_DRIVER_PRESENT
+    if(busoff_hold != 0){       //can send frame success,exit bus-off mode
+        busoff_hold = 0x00;
+    }
+#endif
+
+3.5 SysTick_Handler中断函数中添加
+	OSTK_TaskSchedule();
+	can_busoff();
+
+4. 修改BF7006Mxx_config.c，can_config函数中报文过滤ID（0x74D -> 0x729）
