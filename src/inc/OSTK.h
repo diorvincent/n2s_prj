@@ -3,7 +3,7 @@
  * OSTK-Multiple Task Schedule Control
  * Xi'An ManHui Info. Science LLC
  * Created on: Oct 27, 2023
- * Author: Xue Le
+ * Author: He Jingchi
  */
 
 #ifndef OSTK_OSTK_H_
