@@ -2,7 +2,7 @@
  * DATA_TYPE.h
  * Xi'An ManHui Info. Science LLC
  * Created on: Nov 29, 2023
- * Author: Xue Le
+ * Author: He Jingchi
  */
 
 #ifndef DATA_TYPE_DATA_TYPE_H_
