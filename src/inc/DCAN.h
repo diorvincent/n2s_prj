@@ -2,8 +2,7 @@
  * DCAN.h
  * Xi'An ManHui Info. Science LLC
  * Created on: Nov 1, 2023
- * Author: Xue Le
- * Modifyer: He Jingchi
+ * Author: He Jingchi
  * Update on: Jun 27, 2024
  */
 
