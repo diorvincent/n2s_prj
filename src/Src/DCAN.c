@@ -3,8 +3,7 @@
  * Xi'An ManHui Info. Science LLC
  * Created on: Nov 1, 2023
  * Modify on: Dec 26, 2023
- * Author: Xue Le
- * Modifier: He Jingchi
+ * Author: He Jingchi
  * Update on: Jul 19, 2024
  */
 
@@ -1911,7 +1910,7 @@ ErrorStatus EFLS_DRV_FlashReadyCheck(void)
     return ret;
 }
 
-/* ?�Ϊ̫O?addr�Mlen��4�r??? */
+/* ?¥ÎªÌ«O?addr©Mlenªº4¦r??? */
 void EFLS_DRV_Read_Data_From_Eemprom(U32 addr, U8 *buf, U32 len)
 {
     eeprom_Nwords_get(addr, (uint32_t *)buf, len / 4);
