@@ -2,7 +2,7 @@
  * CAN_CFG.h
  * Xi'An ManHui Info. Science LLC
  * Created on: Oct 31, 2023
- * Author: Xue Le
+ * Author: He Jingchi
  */
 
 #ifndef COMM_CAN_CFG_H_
