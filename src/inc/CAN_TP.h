@@ -2,8 +2,7 @@
  * CAN_TP.h
  * Xi'An ManHui Info. Science LLC
  * Modify on: Dec 26, 2023
- * Author: Xue Le
- * Modifier: He Jingchi
+ * Author: He Jingchi
  */
 
 #ifndef COMM_CAN_TP_H_
