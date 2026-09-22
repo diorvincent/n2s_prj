@@ -3,8 +3,7 @@
  * Xi'An ManHui Info. Science LLC
  * Created on: Oct 31, 2023
  * Modify on: Dec 26, 2023
- * Author: Xue Le
- * Modifier: He Jingchi
+ * Author: He Jingchi
  */
 
 #include "CAN_TP.h"
