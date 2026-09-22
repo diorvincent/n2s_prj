@@ -3,8 +3,7 @@
  * OSTK-Operation System Task Schedule
  * Xi'An ManHui Info. Science LLC
  * Created on: Oct 27, 2023
- * Author: Xue Le
- * Modifer: He Jingchi
+ * Author: He Jingchi
  * Mdodify on: Jun 27, 2024
  */
 
